@@ -68,6 +68,6 @@ int main()
     printf("\n");
     preorder(p);
     printf("\n");
-    postorder(p);
+    postorder(p)
 
 }
