@@ -21,10 +21,11 @@ void sort(int arr[],int size)   //sorting optimization can be done.;
    }
 }
 
-void searchpairs(int arr[],int size,int diff)  // searching optimization can be done. O(nˆ2);
+int searchpairs(int arr[],int size,int diff)  // searching optimization can be done. O(nˆ2);
 {
     int i=0;
     int j;
+    int b=0;
     while(i!=size)
     {
         j=size-1;
@@ -33,19 +34,28 @@ void searchpairs(int arr[],int size,int diff)  // searching optimization can be 
         {
             if(arr[j]==sudoadd)
             {
+                b=b+1;   
                 printf("%d , %d\n",arr[i],arr[j]);
             }
             j--;
         }
         i++;
     }
+    if(b>0)
+    {
+      return 1;
+    }
+    else 
+      return 0;
 }
 
 int main()
 {
    int arr[]={5,20,17,2,6,80};
    int size=sizeof(arr)/sizeof(int);
-   int diff=11;
+   int diff=10;
    sort(arr,size);
-   searchpairs(arr,size,diff);
+   int k=searchpairs(arr,size,diff);
+   if(k==0)
+     printf("no such pair exist");
 }
