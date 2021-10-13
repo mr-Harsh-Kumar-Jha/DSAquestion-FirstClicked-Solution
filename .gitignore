@@ -3,3 +3,4 @@ basic
 time_pass.cpp
 time_pass
 searching_in_an_array_where_adjacent_differ_by_atmost_k
+search_pairs_whose_diff_equals_diff
