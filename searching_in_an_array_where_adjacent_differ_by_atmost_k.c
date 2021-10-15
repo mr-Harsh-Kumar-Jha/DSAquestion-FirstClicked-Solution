@@ -20,7 +20,7 @@ void searching(int arr[] , int size, int data, int diff)
     {
          if(arr[i]==data)
          {
-           printf("%d\t",i);
+           printf("%d\t",i+1);
            return;
          }
          if( abs(arr[i+1]-arr[i]) > diff )

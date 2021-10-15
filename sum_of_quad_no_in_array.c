@@ -21,13 +21,42 @@
       }
    }
 }*/
+void  print(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+       printf("%d",arr[i]);
+    }
+    printf("\t");
+}
+
+void sort(int arr[],int size)
+{
+ int temp1;
+ int k;
+    for (int i=0;i<size;i++)
+    {
+        temp1=arr[i];
+        k=i;
+        for(int j=i-1;j>=0;j--)
+        {
+           if(arr[j]>temp1)
+           {
+              arr[k]=arr[j];
+              k=j;
+              
+           }
+        }
+        arr[k]=temp1;
+    }
+}
 
 void recurse(int arr[], int size, int sum, int data, int arr1[], int j, int k)
 {
     int i;
     if(k==4 && sum==data)
     {
-      //printf("a\n");
+     // printf("\n");
       //sort(arr1 , 4);
        for(k=0; k<4; k++)
        {
@@ -54,7 +83,12 @@ void recurse(int arr[], int size, int sum, int data, int arr1[], int j, int k)
 int main()
 {
     int arr[]={10,2,3,4,5,7,8};
+    
     int size=sizeof(arr)/sizeof(int);
+
+    sort(arr,size);
+   // print(arr,size);
+
     int sum=0;
     int data=23;
     int arr1[4];
