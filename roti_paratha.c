@@ -1,54 +1,46 @@
 #include<stdio.h>
 
-int max(int total[],int no_of_chef)
-{
-    int max1=0;
-    for(int i=0;i<no_of_chef;i++)
-    {
-       if(total[i]>max1)
-       {
-          max1=total[i];
-       }
-    }
-    return(max1);
-}
-
-void min_time(int time_taken_by_each_chef[],int no_of_chef,int order)
+void minimumtime(int rank[],int totchef,int order)
 {
    int i=1;
    int paratha=0;
    int j=0;
-   int total[]={1,2};
-   int total1[]={1,2};
+   int total[]={1,2,5,2,8};
+   int total1[]={1,2,5,2,8};
 
-   while(paratha!=order)
+   while(paratha<order)
    {
-       while(j!=no_of_chef)
+       //printf("%d ",i);
+       while(j!=totchef)
        {
-           if(i==time_taken_by_each_chef[j])
+        // printf("b");
+           if(i==total1[j])
            {
+               //printf("a\n");
+               total1[j]=total1[j]+rank[j]+total[j];
+                // printf("%d",total1[0]);
+                // printf("%d\n",total1[1]);
+               total[j]=total[j]+rank[j];   
                paratha+=1;
-               total1[j]=total1[j]+time_taken_by_each_chef[j]+total[j];
-               total[j]=total[j]+time_taken_by_each_chef[j];               
+
            }
-           j=j+1;
+           j++;
        }
        j=0;
-       i=i+1;
+       i++;
        // printf("%d",i);
    }
-  
-int max1 = max(total,no_of_chef);
-  printf("%d",max1);
+    printf("%d\n",i-1);
 }
+  
 
 int main()
 {
-    int time_taken_by_each_chef[]={1,2};
-    int no_of_chef=sizeof(time_taken_by_each_chef)/sizeof(int);
+    int rank[]={1,2,5,2,8};
+    int totchef=sizeof(rank)/sizeof(int);
 
-    int no_of_paratha_ordered=8;
+    int order=8 ;
 
-    min_time(time_taken_by_each_chef,no_of_chef,no_of_paratha_ordered);
+    minimumtime(rank,totchef,order);
 
 }
