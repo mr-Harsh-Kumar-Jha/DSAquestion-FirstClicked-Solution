@@ -2,11 +2,11 @@
 
 void minimumtime(int rank[],int totchef,int order)
 {
-   int i=1;
+   int i=1;// this acts as a clock .
    int paratha=0;
-   int j=0;
-   int total[]={1,2,5,2,8};
-   int total1[]={1,2,5,2,8};
+   int j=0; //this will increment condition of  no. of chef (as total cases)
+   int total[]={1,1,1,1}; // it is storing the time taken by chef after making each paratha
+   int total1[]={1,1,1,1}; //it is storing the total time taken by chef till current going timme. 
 
    while(paratha<order)
    {
@@ -36,7 +36,7 @@ void minimumtime(int rank[],int totchef,int order)
 
 int main()
 {
-    int rank[]={1,2,5,2,8};
+    int rank[]={1,1,1,1};
     int totchef=sizeof(rank)/sizeof(int);
 
     int order=8 ;
