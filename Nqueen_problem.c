@@ -9,12 +9,12 @@ int IsSafe(int arr[N][N],int col,int row)
     }
     for (i = col, j = row; j >= 0 && i < N; i++, j--)
     {
-         if(arr[i][j]==1) //checking upper left part
+         if(arr[i][j]==1)    //checking upper left part
             return 0;
     }
     for (i = col, j = row; i >= 0 && j >= 0; i--, j--)
     {
-        if(arr[i][j]==1)//checking lower left part
+        if(arr[i][j]==1)     //checking lower left part
             return 0;
     }
     return 1;
