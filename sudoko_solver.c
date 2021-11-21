@@ -56,7 +56,7 @@ int Sudoko_solver(int arr[N][N],int col,int row)
           return 1 ;
       }
       
-      if(col==N){
+      if(col>=N){
       //printf("b");
           row++;
           col=0;
@@ -115,9 +115,9 @@ int Sudoko_solver(int arr[N][N],int col,int row)
   }
           
         //   printf("f\n"); 
-          print(arr);
-          printf("\n");
-         printf("k\n");
+         //  print(arr);
+         //  printf("\n");
+         // printf("k\n");
      return 0;  
 }
 
@@ -125,7 +125,7 @@ int main()
 {
    /* printf("N=");
     scanf("%d",&N);*/
-   int grid[N][N] = { {1, 0, 0,  0, 0, 7,  0, 9, 0}, 
+   int grid[N][N] =  {{1, 0, 0,  0, 0, 7,  0, 9, 0}, 
                       {0, 3, 0,  0, 2, 0,  0, 0, 8}, 
                       {0, 0, 9,  6, 0, 0,  5, 0, 0}, 
                       {0, 0, 5,  3, 0, 0,  9, 0, 0}, 
@@ -133,7 +133,7 @@ int main()
                       {6, 0, 0,  0, 0, 4,  0, 0, 0}, 
                       {3, 0, 0,  0, 0, 0,  0, 1, 0}, 
                       {0, 4, 0,  0, 0, 0,  0, 0, 7}, 
-                      {0, 0, 7,  0, 0, 0,  3, 0, 0} };
+                      {0, 0, 7,  0, 0, 0,  3, 0, 0}};
    
     int sudoko=Sudoko_solver(grid,0,0);
    // printf("d\n");
