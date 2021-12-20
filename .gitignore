@@ -1,6 +1,5 @@
 basic.c
 basic
-Binary_search_tree_using_linkedlist1
 time_pass.cpp
 time_pass
 searching_in_an_array_where_adjacent_differ_by_atmost_k
@@ -20,3 +19,4 @@ NQueen_problem
 sudoko_solver
 sukoku
 tug_of_water
+Binary_search_tree_using_linkedlist1
