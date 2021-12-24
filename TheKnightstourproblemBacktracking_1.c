@@ -1,5 +1,6 @@
+//this solution takes time to give output but the thing is that output is priented
 #include<stdio.h>
-#define N 8
+#define N 6
 
 int isSafe(int arr[N][N], int xcord, int ycord){
  if(xcord<N && ycord<N && xcord>=0 && ycord>=0 && arr[xcord][ycord]==-1){
