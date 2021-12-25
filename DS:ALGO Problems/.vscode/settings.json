@@ -1,0 +1,5 @@
+{
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.runInTerminal": true
+}
