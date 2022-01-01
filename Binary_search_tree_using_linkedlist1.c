@@ -14,7 +14,6 @@ struct node* tree(int a)
     p->data=a;//setting a data.
     p->L=NULL;//setting the left and right child to NULL.
     p->R=NULL;//setting the left and right child to NULL.
-
     printf("element pushing\n");
     return p;//finally returning the created node.
 }
