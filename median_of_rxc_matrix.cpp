@@ -1,6 +1,6 @@
 // C++ program to find median of a matrix
 // sorted row wise
-#include"bits/stdc++.h"
+#include<bits/stdc++.h>
 using namespace std;
 
 const int MAX = 100;
