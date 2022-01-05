@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
 
+void parsar(char *);
+
 int main()
 {
 	char string[]="<H1>    Hy this Harsh    <H2>";
@@ -18,13 +20,13 @@ void parsar(char *string)
       	if(string[i]=='<')
 	    {
 	       c=0;
-		   continue;	
+		   continue;
     	}
     	else if(string[i]=='>')
 	    {
 		   c=1;
 		   continue;
-	    }  
+	    }
 	    if(c==1)
 	    {
 		   string[index]=string[i];
@@ -32,5 +34,5 @@ void parsar(char *string)
 	    }
 	}
 	 string[index]='\0';
-}           
+}
 
