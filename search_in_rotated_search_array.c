@@ -76,3 +76,4 @@ int main()
     int item=search(arr,size,target);
     printf("%d",item+1) ;
 }
+

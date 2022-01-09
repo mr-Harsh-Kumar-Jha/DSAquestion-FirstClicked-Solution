@@ -72,3 +72,7 @@ int main()
   printSorted(mat);
   return 0;
 }
+
+/*
+   Method 3: it uses heap
+*/
