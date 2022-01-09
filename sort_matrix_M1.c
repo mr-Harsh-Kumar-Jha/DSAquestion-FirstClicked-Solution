@@ -1,5 +1,9 @@
 //time complexity of this problem is O(n^4).
 // Online C compiler to run C program online
+
+/*
+   this is solution of totally(i.e row and column wise it is unsorted) unsorted array
+*/
 #include <stdio.h>
 #include <limits.h>
 #define R 3
@@ -37,14 +41,6 @@ void Sort(int arr[][C],int a[][C]){
             }
         }
     }
-   //   for(int i=0;i<R;i++)
-   //  {
-   //      for(int j=0;j<C;j++)
-   //      {
-   //          printf("%d\t",a[i][j]);
-   //      }
-   //      printf("\n");
-   //  }
 }
 
  void print(int a[][C])
