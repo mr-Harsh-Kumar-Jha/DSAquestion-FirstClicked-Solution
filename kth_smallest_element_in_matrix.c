@@ -1,67 +1,63 @@
-// Very great optimised solution O(1)
-
+// Online C compiler to run C program online
 #include <stdio.h>
 #include<limits.h>
-#define R 5
-#define C 5
+#define R 4
+#define C 4
 
-void Find_kth_small(int arr[][C],int term_no){
-    int i, j;
-    i=(term_no-1)%R;
-    j=(term_no-1)/R;
-    int temp=arr[i][j];
-    int min=INT_MAX;
-    if(i-1>=0 && j+1<C){
-       printf("a\n");
-    for(int k=i-1;k<i;k++)
+void Sort(int arr[][C],int a[][C]){
+    int temp,temp2;
+    int M=0;
+    for(int i=0;i<R;i++)
     {
-       for(int l=j+1;i<C;i++)
-       {
-          if(temp>arr[k][l])
-          {
-             min=arr[k][l];
-             temp=min;
-          }
-          else
-           min=temp;
-       }
+        for(int j=0;j<C;j++)
+        {
+            temp=arr[i][j];
+            arr[i][j]=INT_MAX;
+            for(int k=i;k<R;k++)
+            {
+                for(int L=0;L<C;L++)
+                {
+                     if(temp>arr[k][L]){
+                        temp2=temp;
+                        temp=arr[k][L];
+                        arr[k][L]=temp2;
+                    }
+                }
+            }
+            if(M<C)
+            {
+              a[i][M]=temp;
+              M++;
+            }
+            else{
+                M=0;
+                a[i][M]=temp;
+                M++;
+            }
+        }
     }
-    }
-     else if(j+1==C && i+1<R && j-1>0){
-       printf("a\n");
-       for(int k=i+1;k<R;k++)
-       {
-          for(int l=j-1;l<j;l++)
-          {
-             if(temp<arr[k][l])
-             {
-                min=arr[k][l];
-                temp=min;
-             }
-             else
-             min=temp;
-          }
-       }
-    }
-    else{
-        printf("b\n");
-      min=temp;
-    }
+}
 
+void Find_kth_small(int arr[][C],int term_no,int a[][C]){
+    int i, j;
+    i=(term_no-1)/R;
+    j=(term_no-1)%R;
 
-    printf("%d",min);
+    Sort(arr,a);
+
+    printf("%d",a[i][j]);
 
 }
 
 int main() {
 
-   int arr[][C]={{7 ,17 ,27, 36 ,38},
-                   {14, 23, 35, 38 ,43},
-                   {19, 26 ,42, 49 ,50},
-                   {23, 33, 48, 52 ,53},
-                   {30 ,40 ,52 ,56 ,64,}};
-    int a=13;
-   Find_kth_small(arr,a);
+   int arr[][C]={{16, 28, 60, 64},
+                  {22, 41, 63, 91},
+                  {27, 50, 87, 93},
+                  {36, 78, 87, 94 }};
+    int a=14;
+    int arr2[R][C];
+   Find_kth_small(arr,a,arr2);
 
     return 0;
 }
