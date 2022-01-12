@@ -1,3 +1,5 @@
+// very optimised solution time complexity is O(n^2)
+
 #include <bits/stdc++.h>
 using namespace std;
 
