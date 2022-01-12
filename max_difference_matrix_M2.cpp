@@ -1,5 +1,6 @@
 // An efficient method to find maximum value of mat[d]
 // - ma[a][b] such that c > a and d > b
+// time complexity of this solution is O(n^2)
 #include <bits/stdc++.h>
 using namespace std;
 #define N 5
