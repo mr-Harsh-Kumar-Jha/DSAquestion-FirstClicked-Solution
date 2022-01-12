@@ -1,13 +1,8 @@
-//time complexity of this problem is O(n^4).
-// Online C compiler to run C program online
-
-/*
-   this is solution of totally(i.e row and column wise it is unsorted) unsorted array
-*/
+//time complexity for this solution is O(n^4)
 #include <stdio.h>
-#include <limits.h>
-#define R 3
-#define C 3
+#include<limits.h>
+#define R 4
+#define C 4
 
 void Sort(int arr[][C],int a[][C]){
     int temp,temp2;
@@ -43,24 +38,26 @@ void Sort(int arr[][C],int a[][C]){
     }
 }
 
- void print(int a[][C])
-{
-    for(int i=0;i<R;i++)
-    {
-        for(int j=0;j<C;j++)
-        {
-            printf("%d  ",a[i][j]);
-        }
-        printf("\n");
-    }
+void Find_kth_small(int arr[][C],int term_no,int a[][C]){
+    int i, j;
+    i=(term_no-1)/R;
+    j=(term_no-1)%R;
+
+    Sort(arr,a);
+
+    printf("%d",a[i][j]);
+
 }
 
 int main() {
-    int arr[R][C]={{1,5,3},
-                   {2,8,7},
-                   {4,6,9}};
-    int a[R][C];
-    Sort(arr,a);
-    print(a);
+
+   int arr[][C]={{16, 28, 60, 64},
+                  {22, 41, 63, 91},
+                  {27, 50, 87, 93},
+                  {36, 78, 87, 94 }};
+    int a=14;
+    int arr2[R][C];
+   Find_kth_small(arr,a,arr2);
+
     return 0;
 }
