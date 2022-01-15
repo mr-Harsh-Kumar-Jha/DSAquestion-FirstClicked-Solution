@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+// time complexity is O(n^4)
 #include <stdio.h>
 #include<limits.h>
 #define R 4
