@@ -1,0 +1,1 @@
+ cout<<str.size()<<endl;
