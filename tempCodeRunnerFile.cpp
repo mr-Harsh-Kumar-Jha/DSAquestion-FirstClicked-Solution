@@ -1,1 +1,1 @@
- cout<<str.size()<<endl;
+arr[i]=sh.pop_back();
