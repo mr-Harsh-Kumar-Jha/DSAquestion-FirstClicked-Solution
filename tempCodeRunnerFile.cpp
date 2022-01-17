@@ -1,1 +1,1 @@
-arr[i]=sh.pop_back();
+ // cout<<"hi="<<result<<endl;
