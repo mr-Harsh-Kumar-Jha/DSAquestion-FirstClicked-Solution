@@ -1,1 +1,1 @@
- // cout<<"hi="<<result<<endl;
+cout<<sum<<endl;
