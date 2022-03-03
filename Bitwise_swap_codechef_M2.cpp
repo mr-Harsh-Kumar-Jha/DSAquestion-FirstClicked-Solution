@@ -1,3 +1,5 @@
+//one of the best optimised solution of this question
+
 #include<bits/stdc++.h>
 using namespace std;
 
