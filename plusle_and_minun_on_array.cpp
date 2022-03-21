@@ -1,3 +1,22 @@
+// Chef has an array A of length N. He defines the alternating sum of the array as:
+
+// S=|A1|−|A2|+|A3|−|A4|+…(−1)N−1⋅|AN|
+// Chef is allowed to perform the following operation on the array at most once:
+
+// Choose two indices i and j (1≤i<j≤N) and swap the elements Ai and Aj.
+// Find the maximum alternating sum Chef can achieve by performing the operation at most once.
+
+// Note: |X| denotes the absolute value of X. For example, |−4|=4 and |7|=7.
+
+//  # sample input
+// 2
+// 2
+// 10 -10
+// 7
+// -3 -2 -1 0 1 2 3
+
+//solution : Alternating addition ke case me odd position pe min element present hone chayiea and even position pe max element hoona chayiea
+
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
@@ -19,19 +38,12 @@ int main()
       cin >> N;
       ll arr[N];
       ll count = 0;
-      int j, k = 1;
-
-      if ((N - 1) % 2 == 0)
-         j = N - 1;
-      else
-         j = N - 2;
 
       ll max = INT_MIN;
       int max_;
       ll min1 = INT_MAX;
       int min2;
-      ll max2 = INT_MIN;
-      int max3;
+
       int a = 0;
 
       for (int i = 0; i < N; i++)
@@ -39,49 +51,19 @@ int main()
          ll am;
          cin >> am;
          arr[i] = abs(am);
-         if (arr[i] > max)
+         if (i%2!=0 && arr[i] > max)
          {
             max = arr[i];
             max_ = i;
          }
-      }
-      for (int i = 0; i < N; i += 2)
-      {
-         if (max_ % 2 != 0 && arr[i] < max)
-         {
-            swap(arr, 0, max_);
-            a = 1;
-            break;
+         else if(i%2==0 && arr[i]<min1){
+             min1=arr[i];
+             min2=i;
          }
       }
-      if (a == 0)
-      {
-         while (k < j)
-         {
-            if (k % 2 != 0)
-            {
-               if (arr[k] > max2){
-                  max2 = arr[k];
-               max3 = k;
-               }
-            }
-            if (j % 2 == 0)
-            {
-               if (arr[j] < min1 && arr[j] < max2)
-               {
-                  min1 = arr[j];
-                  min2 = j;
-               }
-            }
-            j = j - 2;
-            k = k + 2;
-         }
-         //  cout<<"min2="<<min2<<" "<<"max3="<<max3<<endl;
-         swap(arr, min2, max3);
-         // for(int i=0;i<N;i++){
-         //    cout<<endl<<arr[i]<<" ";
-         // }
-      }
+
+     swap(arr, min2, max_);
+
       for (int i = 0; i < N; i++)
       {
          if (i % 2 != 0)
@@ -91,9 +73,8 @@ int main()
          else
             count = count + arr[i];
 
-            cout<<count<<" ";
       }
-      cout<< count << endl;
+      cout<<count << endl;
    }
    return 0;
 }
