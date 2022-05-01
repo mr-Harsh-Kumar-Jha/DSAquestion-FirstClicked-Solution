@@ -6,26 +6,21 @@ using namespace std;
 int main()
 {
    vector<pair<int, int>> v;
-   v.push_back({100, 2});
-   v.push_back({19, 1});
-   v.push_back({27, 3});
-   v.push_back({25, 2});
-   v.push_back({35, 3});
+   v.push_back({50, 2});
+   v.push_back({10, 1});
+   v.push_back({30, 1});
+   v.push_back({40, 1});
    int i = 0;
    sort(v.begin(), v.end());
-   int prev[3] = {-1, -1, -1};
+   int prev[4] = {-1, -1, -1,-1};    // here 3 is no. max dedline of work appointed
    vector<int> m;
-   int count=3; // here 3 is no. max dedline of work appointed
-   for (int i = 4; i >= 0; )
+
+   for (int i = 3; i >= 0; )
    {
-      if(count<=0){
-          break;
-      }
 
       if (v[i].second-1 >=0 && prev[v[i].second-1] == -1)
       {
          m.push_back(v[i].first);
-         count=count-1;
          prev[v[i].second-1]=find(v.begin(),v.end(),v[i])-v.begin() ;
          i=i-1;
       }
