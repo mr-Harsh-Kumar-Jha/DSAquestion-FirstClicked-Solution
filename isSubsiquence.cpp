@@ -1,18 +1,16 @@
+// https://leetcode.com/problems/is-subsequence/
+// one of the fastes code and well optimised
+
 #include<bits/stdc++.h>
 
 using namespace std;
-
-bool isSubsequence(string s, string t) {
-        map<char, int>m1, m2;
+// using find STL in string
+    bool isSubsequence(string s, string t) {
         if(s.length()==0) return true;
         size_t found=-1;
-        int count=0;
-        for(int i=0;i<s.length();i++){
+        for(size_t i=0;i<s.length();i++){
            found=t.find(s[i],found+1);
-           if(found != string::npos) count+=1;
-            else{
-                return false;
-            }
+           if(found == string::npos) return false;
        }
        return true;
     }
