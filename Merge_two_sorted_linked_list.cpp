@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/merge-two-sorted-lists/
+// this solution is an iterative approach
+
 #include <bits/stdc++.h>
 using namespace std;
 
