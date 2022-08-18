@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/reduce-array-size-to-the-half
+// this a code which takes O(n*log(n)) time complexity but still not optimised
+
 #include <bits/stdc++.h>
 using namespace std;
 
