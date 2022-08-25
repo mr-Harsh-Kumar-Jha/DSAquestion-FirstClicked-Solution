@@ -1,3 +1,6 @@
+// time complexity : O(n) and space complexity O(n)
+// https://leetcode.com/problems/longest-palindrome
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -10,7 +13,7 @@ using namespace std;
         for(auto it: freq) {
             if(it.second % 2 == 1)
                 ans1 = 1;
-            ans += it.second / 2;
+            ans += it.second / 2; // storing half iteration as another iteration is just copy of first .
         }
         return ans * 2 + ans1;
     }
