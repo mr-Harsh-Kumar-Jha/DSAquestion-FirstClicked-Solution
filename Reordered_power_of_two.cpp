@@ -1,7 +1,6 @@
 //https://leetcode.com/problems/reordered-power-of-2/
 // this is one of the fastest solution .
 //NOTE :- there are only 10 unique digits 0-9 and for each number we can keep a count of digits from 0 to 9 and as 10^9 is approximately equal to 15*(2^26) we can also run a loop from 0 to 27 and find occurance of each digit of n and digit formed by taking power .
-//Also note any place of power of 2 doesnot consist of 0 .
 
 #include <bits/stdc++.h>
 using namespace std;
