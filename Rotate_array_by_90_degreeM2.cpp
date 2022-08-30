@@ -1,4 +1,6 @@
-// very optimised solution time complexity is O(n^2)
+//https://leetcode.com/problems/rotate-image/
+// very optimised solution time complexity is O(n^2) no extra space is used .
+// the main concept behind using it is we are traversing each block of square and swapping it with n-i-1 th element
 
 #include <bits/stdc++.h>
 using namespace std;
