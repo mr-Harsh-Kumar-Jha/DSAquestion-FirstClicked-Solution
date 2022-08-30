@@ -1,5 +1,5 @@
 // time complexity is O(n^2) and space complexity is O(n^2)
-
+// here another 2-D matrix is been uploaded . This is a Brute Force approach .
 
 #include <stdio.h>
 #define R 4
