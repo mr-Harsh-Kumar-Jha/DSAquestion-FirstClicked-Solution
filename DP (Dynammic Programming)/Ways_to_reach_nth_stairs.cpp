@@ -6,8 +6,8 @@ using namespace std;
 
 int solveSteps(int stairs , vector<int>&dp){
    if(stairs == 0) return 1;
-   if(stairs == 1) return 1;
-   if(dp[stairs]!=-1) return dp[stairs];
+   if(stairs < 1) return 0;
+   if(dp[stairs]!=0) return dp[stairs];
    return dp[stairs] = solveSteps(stairs-1 , dp) + solveSteps(stairs-2 , dp);
 
 }
@@ -15,7 +15,7 @@ int solveSteps(int stairs , vector<int>&dp){
 int main(){
     int stairs;
     cin>>stairs;
-    vector<int>dp(stairs+1 , -1);
+    vector<int>dp(stairs+1 , 0);
     solveSteps(stairs , dp);
    cout<<dp[stairs]<<endl;
 }
