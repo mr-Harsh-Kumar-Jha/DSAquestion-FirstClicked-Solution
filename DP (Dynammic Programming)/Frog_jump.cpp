@@ -4,7 +4,7 @@
 using namespace std;
 
 int minPow(int stairs , vector<int>& pow , vector<int>& dp){
-   if(stairs == 1) return 0;
+   if(stairs == 0) return 0;
    if(dp[stairs]!=0) return dp[stairs];
    int left = minPow(stairs-1 , pow, dp)+ abs(pow[stairs]-pow[stairs-1]);
     int right = INT_MAX;
@@ -15,7 +15,7 @@ int minPow(int stairs , vector<int>& pow , vector<int>& dp){
 
 int main(){
    vector<int>pow{10,30,20,60,40};
-   vector<int> dp(pow.size()+1,0);
-   minPow(pow.size(),pow,dp);
-   cout<<dp[pow.size()];
+   vector<int> dp(pow.size(),0);
+   minPow(pow.size()-1,pow,dp);
+   cout<<dp[pow.size()-1];
 }
