@@ -13,7 +13,7 @@ int maxSum(int ind , vector<int>&vec, vector<int>&dp){
 }
 
 int main(){
-   vector<int>vec{2,1,4,9,3};
+   vector<int>vec{2,3,4,9,3};
    vector<int>dp(vec.size(),-1);
    cout<<maxSum(vec.size()-1,vec,dp)<<endl;
 }

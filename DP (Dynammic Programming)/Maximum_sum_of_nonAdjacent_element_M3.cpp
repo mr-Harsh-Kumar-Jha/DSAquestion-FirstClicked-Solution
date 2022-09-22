@@ -4,9 +4,9 @@
 using namespace std;
 
 int main(){
-    vector<int>vec{1,3,2,5,9,6};
-    int prev2=vec[0];
-    int prev = 0;
+    vector<int>vec{1,3,9,5,9,6};
+    int prev=vec[0];
+    int prev2 = 0;
     for(int i=1;i<vec.size();i++){
         int take = vec[i];
         if(i>1) take+=prev2;
