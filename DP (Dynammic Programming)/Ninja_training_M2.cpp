@@ -21,7 +21,6 @@ int maxSolve(vector<vector<int>> &vec, vector<vector<int>> &dp)
       for (int last = 0; last < 4; last++)
       {
          dp[ind][last]=0;
-         int maxi = INT_MIN;
          for (int task = 0; task < 3; task++)
          {
             if (task != last)
