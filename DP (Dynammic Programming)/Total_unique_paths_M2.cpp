@@ -4,6 +4,8 @@
 
 //-----------------------------------------------------------------------------
 
+// this is a bottom up approach and time complexity of this solution is O(n*m) and space complexity is O(n*m).
+
 #include<bits/stdc++.h>
 using namespace std;
 
