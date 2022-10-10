@@ -6,7 +6,7 @@
 
 //-----------------------------------------------------------------------------------
 
-// this is a tabulationapproach and time complexity of this solution is O(n*n) and space complexity is O(n*m)
+// this is a tabulation approach and time complexity of this solution is O(n*n) and space complexity is O(n*m)
 
 #include<bits/stdc++.h>
 using namespace std;
