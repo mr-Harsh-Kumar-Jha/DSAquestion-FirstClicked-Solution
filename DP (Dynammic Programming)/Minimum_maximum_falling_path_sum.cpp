@@ -4,18 +4,19 @@
 
 //----------------------------------------------------------------------------------
 
-// this is a recursive approach and the time complexity of the solution is exponential and space complexity is auxilliary space O(n*m)
+// This is a top down approach and time complexity is O(n*m) and space complexity is O(n*m)+O(n)
 
 #include<bits/stdc++.h>
 using namespace std;
 
-int minMaxsum(vector<vector<int>>&vec , int i,int j){
+int minMaxsum(vector<vector<int>>&vec , int i,int j,vector<vector<int>>&dp){
    if(j<0 || j>vec[vec.size()-1].size()-1) return -1e9;
    if(i==0) return vec[0][j];
-   int up = vec[i][j] + minMaxsum(vec,i-1,j)  ;
-   int upldig = vec[i][j] + minMaxsum(vec,i-1,j-1) ;
-   int uprdig =  vec[i][j] + minMaxsum(vec,i-1,j+1);
-   return max(up,max(upldig,uprdig));
+   if(dp[i][j]!=-1) return dp[i][j];
+   int up = vec[i][j] + minMaxsum(vec,i-1,j,dp)  ;
+   int upldig = vec[i][j] + minMaxsum(vec,i-1,j-1,dp) ;
+   int uprdig =  vec[i][j] + minMaxsum(vec,i-1,j+1,dp);
+   return dp[i][j] = max(up,max(upldig,uprdig));
 }
 
 int main(){
@@ -24,10 +25,10 @@ int main(){
       {100, 3, 2, 1},
       {1, 1, 20, 2},
       {1, 2, 2, 1},
-   };
-   int maxi= -1e9;
+   },dp(vec.size(),vector<int>(vec[0].size(),-1));
+   int maxi=-1e9;
    for(int i=vec[0].size()-1;i>=0;i--){
-      maxi=max(maxi, minMaxsum(vec,vec.size()-1,i));
+      maxi=max(maxi, minMaxsum(vec,vec.size()-1,i,dp));
    }
    cout<<maxi<<endl;
 }
