@@ -4,7 +4,7 @@
 
 //-------------------------------------------------------------------------------
 
-// this is a top down using recursive approach and time complexity is exponential O() and space complexity is O(r*c) which is auxilliary space.
+// this is a top down using recursive approach and time complexity is  O((n*m*m)*9) and space complexity is O(n*m*m) .
 
 #include<bits/stdc++.h>
 using namespace std;
