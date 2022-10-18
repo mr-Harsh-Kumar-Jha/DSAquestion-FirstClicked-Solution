@@ -4,7 +4,7 @@
 
 //-------------------------------------------------------------------------------
 
-// this is a tabulation approach and time complexity is O(n*m*m)*9 and space complexity is O(n*m*m)
+// this is a space optimization approach and time complexity is O(n*m*m)*9 and space complexity is O(n*m)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,13 +19,15 @@ int main()
    };
    int n = vec.size();
   int m = vec[0].size();
-   vector<vector<vector<int>>> dp(vec.size(), vector<vector<int>>(vec[0].size(), vector<int>(vec[0].size(), 0)));
+   vector<vector<int>> prev(vec.size(), vector<int>(m, 0));
+   vector<vector<int>> curr(vec.size(), vector<int>(m, 0));
+
    for (int j1 = 0; j1 < m; j1++) {
     for (int j2 = 0; j2 < m; j2++) {
       if (j1 == j2)
-        dp[n - 1][j1][j2] = vec[n - 1][j1];
+        prev[j1][j2] = vec[n - 1][j1];
       else
-        dp[n - 1][j1][j2] = vec[n - 1][j1] + vec[n - 1][j2];
+        prev[j1][j2] = vec[n - 1][j1] + vec[n - 1][j2];
     }
   }
    for (int i = n - 2; i >= 0; i--)
@@ -45,15 +47,16 @@ int main()
                   else
                      value = vec[i][j] + vec[i][k];
                   if((j+i1>=0 &&  j+i1<m) && ( k+j1>=0 &&  k+j1<m))
-                     value += dp[ i + 1][j + i1][k + j1];
+                     value += prev[j + i1][k + j1];
                   else
                      value += -1e8;
                   maxi = max(maxi, value);
                }
             }
-            dp[i][j][k]=maxi;
+            curr[j][k]=maxi;
          }
       }
+      prev=curr;
    }
-   cout<<dp[0][0][m-1]<<endl;
+   cout<<prev[0][m-1]<<endl;
 }
