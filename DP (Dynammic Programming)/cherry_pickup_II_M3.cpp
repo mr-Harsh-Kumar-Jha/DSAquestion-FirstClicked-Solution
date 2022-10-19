@@ -4,7 +4,7 @@
 
 //-------------------------------------------------------------------------------
 
-// this is a space optimization approach and time complexity is O(n*m*m)*9 and space complexity is O(n*m)
+// this is a space optimization approach and time complexity is O(n*m*m)*9 and space complexity is O(n*m*m)
 
 #include <bits/stdc++.h>
 using namespace std;
