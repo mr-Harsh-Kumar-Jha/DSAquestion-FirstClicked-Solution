@@ -4,7 +4,7 @@
 
 //---------------------------------------------------------------------------
 
-// time complexity of the solution is O(2^n) i.e. Exponential in nature vand space complexity is O(n) which is a stack space .
+// time complexity of the solution is O(n*target) and space complexity is            O(n*target) .
 
 #include <bits/stdc++.h>
 using namespace std;
