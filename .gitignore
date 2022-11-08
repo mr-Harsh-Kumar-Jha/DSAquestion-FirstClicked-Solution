@@ -2,6 +2,9 @@ basic.c
 basic
 time_pass.cpp
 time_pass
+Quick_Sort_M1
+Quick_Sort_M2
+Selection_Sort
 searching_in_an_array_where_adjacent_differ_by_atmost_k
 search_pairs_whose_diff_equals_diff
 sum_of_quad_no_in_array
