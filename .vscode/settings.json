@@ -3,6 +3,8 @@
       "iostream": "cpp",
       "vector": "cpp",
       "cassert": "cpp",
-      "__config": "cpp"
+      "__config": "cpp",
+      "algorithm": "cpp",
+      "ostream": "cpp"
    }
 }
