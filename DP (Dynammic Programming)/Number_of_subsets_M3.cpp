@@ -24,7 +24,7 @@ int countSub(vector<int>&vec,int n,int target,vector<vector<int>>&dp){
 }
 
 int main(){
-   vector<int>vec{0,2,1,3,2};
+   vector<int>vec{5,0,2,1,3,2};
    int n = vec.size();
    int target = 4;
    vector<vector<int>>dp(n,vector<int>(target+1,-1));
