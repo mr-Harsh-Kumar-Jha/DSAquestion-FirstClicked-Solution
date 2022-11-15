@@ -13,6 +13,7 @@ using namespace std;
 int countSub(vector<int>&vec,int n,int target,vector<vector<int>>&dp){
    if(n==0){
       if(target == 0 && vec[0]==0) return 2;
+      if(target == 0 || target == vec[n]) return 1;
       return 0;
    }
    if(dp[n][target]!=-1) return dp[n][target];
