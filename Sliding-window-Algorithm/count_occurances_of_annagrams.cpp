@@ -26,8 +26,7 @@ int main()
             if (m[s[start]] == 1) count++;
          }
          start++;
-         // if (m.find(s[end]) != m.end())
-         // {
+         // if (m.find(s[end]) != m.end()){
          //    m[s[end]]--;
          //    if (m[s[end]] == 0)
          //       count--;
