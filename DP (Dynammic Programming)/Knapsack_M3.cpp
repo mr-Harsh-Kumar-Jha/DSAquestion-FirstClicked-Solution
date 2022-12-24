@@ -1,4 +1,4 @@
-//this is a space optimization technique 
+//this is a space optimization solution
 
 #include <bits/stdc++.h>
 using namespace std;

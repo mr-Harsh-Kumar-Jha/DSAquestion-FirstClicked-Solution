@@ -15,7 +15,7 @@ int knapSack(int w , vector<int>&wt , vector<int>&val , int n ,vector<vector<int
 
 int main(){
    vector<int>val{60,100,120};
-   vector<int>wt{15,25,15};
+   vector<int>wt{15,25,30};
    int w = 70;
    int n = val.size();
    vector<vector<int>>dp(n,vector<int>(w+1,-1));
