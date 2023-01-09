@@ -116,6 +116,8 @@ sort_matrix_diagnoally_M2
 sor_matrix_diagonally_m3
 Rotate_2D_matix_by_ninty_M3
 minimum_no_of_coins
+mincoins_to_achieve_target
+minimum_no_of_coins_M3
 reverse_integer
 The_no_of_week_points
 Ways_to_reach_nth_stairs
@@ -174,8 +176,18 @@ partitation_with_given_diff_M3
 Knapsak
 Knapsack_M2
 Knapsack_M3
+Knapsack_M4
 Maximum_sum_subarray_of_size_k
 First_Negative_no_in_every_subarray_of_size_k
 count_occurances_of_annagrams
 Maximum_of_Subarray_sizeK
 all_in_one_Sorting_algo
+balanced_paranthesis_M2
+longestCommonPrifix
+validParanthesis_usingSTL
+min_no_of_arrows_to_burst_balloon
+max_ice_cream_bars_M1
+max_ice_cream_bars_M2
+gasStation_M1
+gasStation_M2
+max_points_on_line
