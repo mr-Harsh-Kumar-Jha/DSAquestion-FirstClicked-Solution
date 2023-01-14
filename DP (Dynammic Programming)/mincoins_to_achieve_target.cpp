@@ -17,6 +17,7 @@ int solve(vector<int>&vec , int n ,int amount , vector<vector<int>>&dp){
 }
 
 int main(){
+   
    vector<int>coins{1,2,3,5};
    int amount  = 7;
    vector<vector<int>>dp(coins.size() , vector<int>(amount+1 , -1));
