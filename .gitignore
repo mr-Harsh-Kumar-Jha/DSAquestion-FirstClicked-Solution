@@ -205,3 +205,7 @@ longest_substring_with_k_uniqueCharacter
 total_setBits_for_natural_no
 insertion_sort
 longest_substring_without_repeating_characters
+min_window_substring
+maximum_subarray_avg1
+contains_duplicate_II
+find_kBeauty_of_number
