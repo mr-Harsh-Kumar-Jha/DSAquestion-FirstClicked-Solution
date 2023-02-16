@@ -32,7 +32,7 @@ int main(){
             TakeCount = 1 + dp[i][j-vec[i]];
          }
          int noTakeCount = dp[i-1][j];
-         dp[i][j]=min(noTakeCount, TakeCount);
+         dp[i][j]=min(noTakeCount, TakeCount); 
       }
    }
    cout<<dp[vec.size()-1][amt]<<endl;
