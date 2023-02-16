@@ -1,0 +1,14 @@
+heap is generally of two types 1.] minHeap 2.] maxHeap
+
+heap doesnot gurantees sorting of element rather it gurentees the first element present will be the high prioritised element .
+
+Identification when to use heap:
+1.] when size is mention along with 2.] largest and smallest keyWord
+
+how to declare maxHeap
+1.] priority_queue<type>maxHeap;
+
+how to declare minHeap ----
+1.] priority_queue<type,vector<type>,comparisonType> pq;
+2.] it is same as maxHeap but the difference is that the way of storig data will be negative eg. priority_queue<int>minHeap;  minHeap.push(-1*array);  for elements of array greater than 0;
+
