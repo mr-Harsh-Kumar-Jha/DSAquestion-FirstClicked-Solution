@@ -13,8 +13,11 @@
 using namespace std;
 
 int findTargetSum(vector<int>&vec , int ind , int target , vector<vector<int>>&dp){
-   if(target==0) return 1;
-   if(ind==0) return vec[ind]==target;
+   if(ind==0){
+      if(target==0 && vec[ind]==0) return 2;
+      else if(target==0) return 1;
+      else return vec[ind]==target;
+   }
    if(dp[ind][target]!=-1) return dp[ind][target];
    int take = 0;
    if(vec[ind]<=target){
@@ -25,9 +28,9 @@ int findTargetSum(vector<int>&vec , int ind , int target , vector<vector<int>>&d
 }
 
 int main(){
-   vector<int>vec{2,107,109,113,127,131,137,3,2,3,5,7,11,13,17,19,23,29,47,53};
+   vector<int>vec{1,2,1};
    int n = vec.size();
-   int target = 1000;
+   int target = 0;
    int total = 0;
 
    for(int i=0;i<n;i++){
