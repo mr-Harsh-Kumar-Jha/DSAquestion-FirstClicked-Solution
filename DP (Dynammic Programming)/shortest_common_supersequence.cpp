@@ -4,7 +4,7 @@
 using namespace std;
 
 int shortestCommonSuper(string &s1 , string &s2 , int n , int m, vector<vector<int>>&dp){
-   if(n < 0 || m < 0 ){
+   if(n == 0 || m == 0 ){
       return 0;
    }
    if(dp[n][m]!=-1) return dp[n][m];
