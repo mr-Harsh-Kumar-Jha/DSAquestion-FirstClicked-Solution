@@ -1,4 +1,4 @@
-// this is a dp solution where time complexity of the solution is O(n*2) ans spce complexity is O(n*2);
+// this is a dp solution where time complexity of the solution is O(n*2) ans spce complexity is O(n*2)+O(n+2);
 
 #include<bits/stdc++.h>
 using namespace std;
