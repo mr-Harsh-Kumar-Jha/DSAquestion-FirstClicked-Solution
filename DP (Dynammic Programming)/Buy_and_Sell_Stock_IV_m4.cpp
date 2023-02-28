@@ -6,13 +6,14 @@ using namespace std;
 int buySellStock(int ind , int transaction , vector<int>&price , int n , vector<vector<int>>&dp,int k){
    if(transaction==2*k) return 0;
    if(ind == n ) return 0;
+   if(dp[ind][transaction]!=-1) return dp[ind][transaction];
    int total = 0;
    if(transaction%2==0){
       total = max((-price[ind]+buySellStock(ind+1,transaction+1, price, n,dp,k)), (0+buySellStock(ind+1,transaction, price, n,dp,k)));
    }
    else total = max((price[ind]+buySellStock(ind+1, transaction+1, price,n,dp,k)), (0+buySellStock(ind+1, transaction, price, n ,dp,k)));
 
-   return total;
+   return dp[ind][transaction] = total;
 }
 
 int main(){
