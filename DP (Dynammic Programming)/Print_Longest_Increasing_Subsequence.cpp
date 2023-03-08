@@ -20,9 +20,10 @@ int main(){
       }
    }
    vector<int>ans;
-   while(vec[prevIndex]!=prevIndex){
-       ans.push_back(vec[prevIndex]);
+   ans.push_back(vec[prevIndex]);
+   while(hash[prevIndex]!=prevIndex){
        prevIndex = hash[prevIndex];
+       ans.push_back(vec[prevIndex]);
    }
    for(int i=ans.size()-1;i>=0;i--){
       cout<<ans[i]<<endl;
