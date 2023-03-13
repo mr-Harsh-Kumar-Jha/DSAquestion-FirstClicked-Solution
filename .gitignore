@@ -282,4 +282,6 @@ Largest_Divisible_Subset
 Largest_Divisible_Subset_m2
 Largest_Divisible_Subset_m3
 print_longest_divisible_subset
-
+longest_string_chain
+Longest_Bitonic_Subsequence
+Number_of_Longest_Increasing_Subsequences
