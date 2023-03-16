@@ -285,3 +285,6 @@ print_longest_divisible_subset
 longest_string_chain
 Longest_Bitonic_Subsequence
 Number_of_Longest_Increasing_Subsequences
+Matrix_Chain_Multiplication
+Matrix_Chain_Multiplication_m2
+Matrix_Chain_Multiplication_m3
