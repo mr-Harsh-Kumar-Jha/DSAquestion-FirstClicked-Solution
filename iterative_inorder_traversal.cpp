@@ -13,14 +13,12 @@ void inorder(node* head){
    st.push(head);
    while(st.size()){
       node* temp=st.top();
-      if(temp->left==NULL){
-         cout<<temp->data<<" ";
-      }
-       if(temp->left!=NULL){
+      if(temp->left!=NULL){
          st.push(temp->left);
          temp->left=NULL;
       }
       else {
+         cout<<temp->data<<" ";
          st.pop();
          if(temp->right!=NULL){
             st.push(temp->right);
