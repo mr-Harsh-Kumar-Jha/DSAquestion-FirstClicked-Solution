@@ -22,11 +22,15 @@ template< class t > void bubbleSort(vector<t> &arr,int n){
 }
 
 template< class t > void selectionSort(vector<t> &arr,int n){
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n-1;i++){
+      int temp = i;
         for(int j=i+1;j<n;j++){
-            if(arr[i]>arr[j]){
-                swap(&arr[i],&arr[j]);
+            if(arr[j]<arr[temp]){
+               temp = j;
             }
+        }
+        if(temp!=i){
+            swap(&arr[i],&arr[temp]);
         }
     }
    for(int i=0;i<n;i++){
