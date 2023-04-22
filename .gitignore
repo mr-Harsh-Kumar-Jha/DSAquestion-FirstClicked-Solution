@@ -299,4 +299,9 @@ iterative_postorder_traversal_using_one_stack
 all_tree_traversal
 max_depth_of_tree
 Check_for_Balanced_Binary_Tree
+Diameter_of_binary_tree
+Diameter_of_binary_tree_m2
+maximum_path_sum
+check_if_two_trees_are_identical
+zigZag_Traversal_of_binary_tree
 #---------------------------tree Questions END---------------------------------#
