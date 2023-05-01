@@ -70,7 +70,7 @@ int main(){
    sixth1->data=9;
    seventh1->data=1;
    eighth1->data=0;
-  vector<int>ans= rightViewTraversal(Head1);
+  vector<int>ans= leftViewTraversal(Head1);
   for(int i=0;i<ans.size();i++){
    cout<<ans[i]<<" ";
   }
