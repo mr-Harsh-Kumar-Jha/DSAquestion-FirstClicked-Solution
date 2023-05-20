@@ -311,6 +311,7 @@ bottom_view_of_tree
 right_left_view_of_tree
 right_left_view_of_tree_m2
 symmetrical_binary_search
+print_root_to_node_path
 #---------------------------tree Questions END---------------------------------#
 directedGraph
 directedGraph_using_adjacency_list
