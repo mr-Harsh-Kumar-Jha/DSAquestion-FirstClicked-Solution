@@ -53,7 +53,7 @@ int main(){
    sixth1->data=9;
    seventh1->data=1;
    eighth1->data=0;
-   if(printPath(Head1,0)){
+   if(printPath(Head1,8)){
       for(int i=0;i<vec.size();i++){
          std::cout<<vec[i]<<" ";
       }
