@@ -29,8 +29,6 @@ class Priority_Queue{
       }
       if (smallest != index){
          swap(vec[smallest], vec[index]);
-         display();
-         cout<<endl;
          heapifyDown(smallest);
       }
    }
@@ -42,12 +40,6 @@ public:
       vec.push_back(a);
       heapifyUp(vec.size() - 1);
 
-   }
-
-   void display(){
-      for(int i=0;i<vec.size();i++){
-         cout<<vec[i]<<" ";
-      }
    }
 
    void pop(){
