@@ -1,11 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int max(int a, int b){
+    return (a > b)? a : b;
+}
+
 struct AVLTree{
    int data;
    AVLTree* left = NULL;
    AVLTree* right = NULL;
-   int height = 0;
+   int height = 1;
 };
 
 int height(AVLTree* node){
@@ -46,36 +50,75 @@ AVLTree* rightRotate(AVLTree* node){
    return temp1;
 }
 
-void deleNode(int data, AVLTree* Head){
-   if(Head == NULL){
-      cout<<"The Tree is empty"<<endl;
-      return;
+AVLTree* insertAfterDelete(AVLTree* node, AVLTree* root){
+   if(root==NULL){
+      root = node;
+   }else{
+       root->left = insertAfterDelete(node, root->left);
    }
 
-   while(Head!=NULL){
-      if( data>Head->data){
-         Head = Head->right;
-      }else if( data<Head->data){
-         Head = Head->left;
-      }else{
-         AVLTree* temp1 = Head->left;
-         AVLTree* temp2 = Head->left->right;
+   root->height = 1+max(height(root->left),height(root->right));
+   int balance = balanceFactor(root);
+   if(balance > 1 && node->data < root->left->data ){
+      return rightRotate(root);
+   }
 
-         temp1->right = Head->right;
-         Head = temp1;
-         if(temp2!=NULL){
-            temp1 = Head->right;
-            temp1->height += temp2->height;
-            while(temp1->left!=NULL){
-               temp1 = temp1->left;
-               temp1->height += temp2->height;
-            }
-            temp1->left = temp2;
-            Head->height = 1+temp2->height;
-            break;
-         }
+   if(balance < -1 && node->data > root->right->data){
+      return leftRotate(root);
+   }
+
+   if(balance > 1 && node->data > root->left->data){
+      root->left = leftRotate(root->left);
+      return rightRotate(root);
+   }
+
+    if(balance < -1 && node->data < root->right->data){
+      root->right = rightRotate(root->right);
+      return leftRotate(root);
+   }
+
+   return root;
+}
+
+AVLTree* deleNode(int data, AVLTree* Head){
+   if(Head==NULL) return Head;
+   if(data > Head->data){
+      Head->right = deleNode(data, Head->right);
+   }else if(data<Head->data){
+       Head->left = deleNode(data, Head->left);
+   }else{
+      AVLTree* temp1 = Head->left!=NULL?Head->left->right:NULL;
+      AVLTree* temp2 = Head->left!=NULL?Head->right:NULL;
+      if(Head->left!=NULL) Head = Head->left;
+      else Head = Head->right;
+      if(temp2!=NULL) Head->right = temp2;
+      if(temp1!=NULL) Head->right = insertAfterDelete(temp1, Head->right);
+   }
+
+   if(Head!=NULL){
+
+      Head->height = 1+max(height(Head->left),height(Head->right));
+      int balance = balanceFactor(Head);
+      if(balance > 1 && balanceFactor(Head->left)>=1){
+         return rightRotate(Head);
+      }
+
+      if(balance < -1 && balanceFactor(Head->right)<=-1){
+         return leftRotate(Head);
+      }
+
+      if(balance > 1 && balanceFactor(Head->left)<=-1){
+         Head->left = leftRotate(Head->left);
+         return rightRotate(Head);
+      }
+
+      if(balance < -1 && balanceFactor(Head->right)>=1){
+         Head->right = rightRotate(Head->right);
+         return leftRotate(Head);
       }
    }
+
+   return Head;
 }
 
 AVLTree* insertNode(int data, AVLTree* head){
@@ -88,7 +131,7 @@ AVLTree* insertNode(int data, AVLTree* head){
      head->right =  insertNode(data, head->right);
    }else if(data<head->data){
       head->left = insertNode(data, head->left);
-   }else return;
+   }else return head;
 
    head->height = 1+max(height(head->left),height(head->right));
 
@@ -97,17 +140,52 @@ AVLTree* insertNode(int data, AVLTree* head){
    if(balance > 1 && data < head->left->data){
       return rightRotate(head);
    }
+
+   if(balance < -1 && data >  head->right->data){
+      return leftRotate(head);
+   }
+
    if(balance > 1 && data > head->left->data){
-      head->right = leftRotate(head->left);
+      head->left = leftRotate(head->left);
       return leftRotate(head);
    }
-    if(balance < -1 && data >  head->right->data){
-      return leftRotate(head);
-   }
+
    if(balance < -1 && data < head->right->data){
-      head = rightRotate(head);
+      head->right = rightRotate(head->right);
       return leftRotate(head);
    }
 
    return head;
+}
+
+void preOrder(AVLTree *root){
+    if(root != NULL)
+    {
+        cout << root->data << " ";
+        preOrder(root->left);
+        preOrder(root->right);
+    }
+}
+
+int main(){
+    AVLTree *root = NULL;
+
+    /* Constructing tree given in
+    the above figure */
+    root = insertNode(10, root);
+    root = insertNode(20, root);
+    root = insertNode(30, root);
+    root = insertNode(40, root);
+    root = insertNode(50, root);
+    root = insertNode(25, root);
+
+    cout << "Preorder traversal of the "
+            "constructed AVL tree is \n";
+    preOrder(root);
+    cout<<endl;
+
+    root = deleNode(40, root);
+    preOrder(root);
+
+    return 0;
 }
