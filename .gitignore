@@ -328,3 +328,5 @@ fileSystem
 indexedSequentialFileSystem
 spanningTree
 AVLTree
+BFS
+DFS
