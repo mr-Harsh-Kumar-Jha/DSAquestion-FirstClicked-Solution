@@ -13,7 +13,7 @@ int root(int x)
 {
     while(id[x] != x)
     {
-        id[x] = id[id[x]];
+        id[x] = id[id[x]]; 
         x = id[x];
     }
     return x;
