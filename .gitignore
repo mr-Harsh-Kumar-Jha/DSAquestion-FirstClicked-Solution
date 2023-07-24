@@ -320,8 +320,8 @@ children_sum_problem_in_binary_tree
 Print_all_the_Node_at_a_distance_of_K
 Print_all_the_Node_at_a_distance_of_K_M2
 time_required_to_burn_BT
-
-
+count_total_node_in_BT_in_logn
+contruct_BT_from_inorder_and_preorder
 #important#
 #---------------------------tree Questions END---------------------------------#
 directedGraph
