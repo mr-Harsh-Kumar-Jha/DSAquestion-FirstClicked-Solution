@@ -72,7 +72,7 @@ vector<int> morrisTraversalPreOrder(Node *root){
    return preOrder;
 }
 
-//--------------this is an postorder traversal-----------------//
+//--------------this is an postorder traversal -----------------//
 vector<int> morrisTraversalPostOrder(Node *root){
    vector<int> postOrder;
    Node *curr = root;
