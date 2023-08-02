@@ -326,6 +326,7 @@ contruct_BT_from_inorder_and_preorder
 contruct_BT_from_postorder_and_preorder
 searilize_and_deserialize_BT
 morris_Traversal
+flatten_a_BT_to_linkedlist
 #important#
 #---------------------------tree Questions END---------------------------------#
 directedGraph
