@@ -327,6 +327,16 @@ contruct_BT_from_postorder_and_preorder
 searilize_and_deserialize_BT
 morris_Traversal
 flatten_a_BT_to_linkedlist
+flatten_a_BT_to_linkedlist_m2
+ceil_using_BT
+floor_using_BT
+kth_largest_and_smallest
+check_if_the_tree_is_bst_or_bt
+lca_in_bst
+inorder_Successor_BST
+inorder_Successor_BST_M2
+#-----------Most Important---------#
+construct_a_bst_from_preorder
 #important#
 #---------------------------tree Questions END---------------------------------#
 directedGraph
