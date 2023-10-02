@@ -343,6 +343,8 @@ largest_BST_in_Binary_Tree_M2
 construct_a_bst_from_preorder
 #important#
 #---------------------------tree Questions END---------------------------------#
+
+#--------------------------graph question Start-----------------------#
 directedGraph
 directedGraph_using_adjacency_list
 QuadTree
@@ -353,3 +355,4 @@ spanningTree
 AVLTree
 BFS
 DFS
+Number_of_provinces
