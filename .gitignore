@@ -344,7 +344,7 @@ construct_a_bst_from_preorder
 #important#
 #---------------------------tree Questions END---------------------------------#
 
-#--------------------------graph question Start-----------------------#
+#--------------------------Graph question Start-----------------------#
 directedGraph
 directedGraph_using_adjacency_list
 QuadTree
@@ -355,5 +355,9 @@ spanningTree
 AVLTree
 BFS
 DFS
-Number_of_provinces
-Number_of_islands
+Number_of_provience
+no_of_island_with_all_4_side_traversal
+no_of_island_with_all_8_side_traversal
+flood_fill_algorithm
+rotten_oranges
+detect_cycle_in_graph_BFS
