@@ -362,6 +362,7 @@ flood_fill_algorithm
 rotten_oranges
 detect_cycle_in_graph_BFS
 01Matrix_LeetCode
+Bipartite_graph
 # --------important question of graphs----------
 surrounded_regions_leetcode
 number_of_enclaves_leetcode
