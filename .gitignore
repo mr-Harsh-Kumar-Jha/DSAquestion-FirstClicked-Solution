@@ -363,6 +363,7 @@ rotten_oranges
 detect_cycle_in_graph_BFS
 01Matrix_LeetCode
 Bipartite_graph
+Bipartite_graph_DFS
 # --------important question of graphs----------
 surrounded_regions_leetcode
 number_of_enclaves_leetcode
