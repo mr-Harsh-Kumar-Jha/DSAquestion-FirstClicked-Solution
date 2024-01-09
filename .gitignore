@@ -372,4 +372,6 @@ detect_cycle_in_graph_DFS
 eventual_safe_state
 topological_sorting
 kahns_algorithm
+Course_Schedule_leetcode_207
+Course_Schedule_II_leetcode_210
 # --------important question of graphs----------
