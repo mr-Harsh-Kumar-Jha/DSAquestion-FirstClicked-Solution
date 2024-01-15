@@ -14,6 +14,7 @@ template< class t > void bubbleSort(vector<t> &arr,int n){
                 swap(&arr[j],&arr[j+1]);
             }
         }
+        
     }
      for(int i=0;i<n;i++){
          cout<<arr[i]<<" ";
