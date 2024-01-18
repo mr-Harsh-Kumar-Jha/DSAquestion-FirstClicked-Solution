@@ -1,6 +1,6 @@
 // this is the approach which is solved using topological sort
 //approach:- so as there is need of printing all those nodes which ends at terminal node . so according to topological sort 1.] we first calculate indegree of each node and then we find those nodes whose indegree is zero .
-//  2.]  sp for doing this we need to reverse the order of each node and then calculate  the inorder 
+//  2.]  so for doing this we need to reverse the order of each node and then calculate  the inorder
 
 #include <bits/stdc++.h>
 using namespace std;
