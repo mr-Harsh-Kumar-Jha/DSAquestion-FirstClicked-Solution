@@ -8,6 +8,7 @@ int burstBalloons(vector<int>&vec,int i,int j, vector<vector<int>>&dp){
    for(int ind = i;ind<=j;ind++){
       int cost = (vec[i-1]*vec[ind]*vec[j+1]) + burstBalloons(vec,i,ind-1,dp) + burstBalloons(vec, ind+1,j,dp);
       mini = max(mini,cost);
+      
    }
    return dp[i][j]=mini;
 }
