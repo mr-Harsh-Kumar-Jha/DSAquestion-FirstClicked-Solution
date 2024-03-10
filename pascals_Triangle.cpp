@@ -4,7 +4,7 @@
 using namespace std;
 // this is a solution where i have used combination formula to solve the question
 
-int calFact(int prev, int rowIndex, int colIndex)
+int calFact(int prev, int rowIndex, int colIndex) // this the technique used for calculating combination formula
 {
    int ans = (((long long int)prev * rowIndex) - ((long long int)prev * colIndex) + ((long long int)prev * 1)) / colIndex;
    return ans;
