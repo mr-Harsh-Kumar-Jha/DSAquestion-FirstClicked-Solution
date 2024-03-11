@@ -378,3 +378,9 @@ find_equivalent_safe_states
 alien_dictionary
 word_ladder_I
 # --------important question of graphs----------
+
+find_the_length_of_longest_common_prefix
+largest_element_in_array
+find_all_pairs_with_the_given_sum
+second_largest_number
+sort_colors
