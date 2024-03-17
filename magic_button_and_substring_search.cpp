@@ -1,6 +1,7 @@
 // you have two strings S of length N and T of length M and a magic Button . Every time you press the magic button , the last letter of the string S is deleted and added to the beginning of the string S you decide to press the magic buttons n times . Each time you press the magic button you will search for the location of string T as a substring in the string S. if you are able to find T as a Subarray of S you will add the beginning index value of thosse substring to answer
 
-// Time Complexity:- O(N^2)
+// Time Complexity:- O(n^2 + n * m)
+//Space Complexity:- O(n^2)
 
 #include <bits/stdc++.h>
 using namespace std;
