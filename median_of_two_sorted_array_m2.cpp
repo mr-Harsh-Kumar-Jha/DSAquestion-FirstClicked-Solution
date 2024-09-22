@@ -1,5 +1,9 @@
 // here we have used two pointer approach for solving the question and you will be amazed with the solution 
 // as both the array are sorted we can use two pointers. If u will see it as a merging process u will realize that we are doing the same what we don in merging process the thing is that we are just storing the required elements with us. 
+
+// No Full Merge Required: By using two pointers, you simulate the process of merging the arrays without needing to actually merge them, saving both time and space.
+// Efficiency: The complexity of this approach is O(n + m), which is efficient, but there’s a trade-off since the problem asks for O(log(n + m)) complexity. However, this solution is straightforward and easy to understand, making it a good starting point for more advanced approaches like binary search.
+
 // time complexity:- O(m+n)
 // space complexity:- O(1)
 
